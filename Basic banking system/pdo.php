@@ -4,8 +4,11 @@
 // FLUSH PRIVILEGES; // to update without loading flush privileges are used.
 
 try 
-{    
-    $pdo = new PDO('mysql:host=localhost;port=3306;dbname=bankingsystem', 'intern', 'spark');
+{   //Development database connection 
+    // $pdo = new PDO('mysql:host=localhost;port=3306;dbname=bankingsystem', 'intern', 'spark');
+
+    // Remote Database Connection
+    $pdo = new PDO('mysql:host=remotemysql.com;port=3306;dbname=iJLW6yxWAP', 'iJLW6yxWAP', '8W486dzHK0');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // set the PDO error mode to exception
 }

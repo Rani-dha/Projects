@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2021 at 12:16 AM
+-- Generation Time: Jul 04, 2021 at 12:29 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -42,15 +42,15 @@ INSERT INTO `customer` (`id`, `customer_name`, `email_id`, `balance`) VALUES
 (1, 'Dennis Ritchie', 'dennis.c@gmail.com', 35000),
 (2, 'Linus Torvalds', 'linus.os@gmail.com', 60000),
 (3, 'Bjarne Stroustrup', 'bjarne.cplusplus@gmail.com', 45000),
-(4, 'Tim Berners-Lee', 'Tim.www@gmail.com', 50000),
-(5, 'Donald Knuth', 'donald.algo@gmail.com', 50000),
+(4, 'Tim Berners-Lee', 'Tim.www@gmail.com', 45000),
+(5, 'Donald Knuth', 'donald.algo@gmail.com', 55000),
 (6, 'Ken Thompson', 'ken.unixos@gmail.com', 45000),
 (7, 'Guido van Rossum', 'guido.py@gmail.com', 47000),
 (8, 'James Gosling', 'james.java@gmail.com', 200000),
 (9, ' Bill Gates', 'billgates.programmer@gmail.com', 45000),
 (10, 'Ada Lovelace', 'adalove.maths@gmail.com', 70000),
-(11, 'Mark Zuckerberg ', 'mark.facebook@gmail.com', 54000),
-(12, 'Daphne Koller', 'daphne.coursera@gmail.com', 53000);
+(11, 'Mark Zuckerberg ', 'mark.facebook@gmail.com', 55000),
+(12, 'Daphne Koller', 'daphne.coursera@gmail.com', 52000);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

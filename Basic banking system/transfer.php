@@ -13,8 +13,9 @@ if (!isset($_GET['email_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transfer money</title>
-    <!-- Bootstrap Font Icon CSS -->
+    <!-- Bootstrap5  CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Sweet alert Js -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -54,25 +55,29 @@ if (!isset($_GET['email_id'])) {
             </nav>
 
             <?php
-            $stmt = $pdo->prepare("SELECT * FROM `customer` where email_id = ':email'");
-            $stmt->bindParam(':email', $email);
-            $email = $_GET['email_id'];
-            $stmt->execute();
+            
+            // Commenting this uncessary part
+            // $stmt = $pdo->prepare("SELECT * FROM customer where email_id = ':email'");
+            // $stmt->bindParam(':email', $email);
+            // $email = $_GET['email_id'];
+            // echo " check $email ";
+            // $stmt->execute();
+            
 
-            $stmtt = $pdo->query("SELECT id, email_id FROM customer");
+            $stmtt = $pdo->query("SELECT email_id FROM customer");
             $rows = $stmtt->fetchAll(PDO::FETCH_ASSOC);
             $clicked = $_GET['email_id'];
             ?>
-
-            <form class="form-horizontal " action="send.php" method="post">
+            
+            <form class="form-horizontal" action="send.php" method="post">
                 <div class="form-group mb-3 row ">
                     <label class="col-sm-4 col-form-label" for="sendto"><b>Send to</b></label>
                     <div class="col-sm-8">
                         <select name="sendto" class="form-control">
                             <?php
                             foreach ($rows as $row) { ?>
-                                <option value="<?php echo $row['email_id']; ?>"><?php echo $row['email_id']; ?>
-                                <?php } ?>
+                                <option value="<?php echo $row['email_id']; ?>"><?php echo $row['email_id'];
+                            } ?>
                         </select>
                     </div>
                 </div>

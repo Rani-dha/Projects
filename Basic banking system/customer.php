@@ -60,7 +60,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo ($row['id']);
         echo ("</td><td>"); ?>
         <a style="color:black;" href="transfer.php?email_id=<?php echo $row["email_id"]; ?>">
-          <?php echo $row["customer_name"]; ?>
+          <?php echo $row['customer_name']; ?>
         </a>
       <?php
         echo ("</td><td>");
